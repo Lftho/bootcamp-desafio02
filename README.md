@@ -40,7 +40,8 @@ Você deverá criar a aplicação do zero utilizando o [Express](https://express
 
 - Sucrase + Nodemon:
     - `yarn init -y, para instalar o package.json`, em seguida o `yarn add express` para baixar o express. ✅
-- ESLint + Prettier + EditorConfig - Feitos as configurações ✅;
+- ESLint + Prettier + EditorConfig
+    - Feitos as configurações ✅;
 - Sequelize (Utilize PostgreSQL ou MySQL);
 
 ### Funcionalidades
