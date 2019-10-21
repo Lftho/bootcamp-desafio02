@@ -38,8 +38,9 @@ Nesse primeiro desafio vamos criar algumas funcionalidades básicas que aprendem
 
 Você deverá criar a aplicação do zero utilizando o [Express](https://expressjs.com/), além de precisar configurar as seguintes ferramentas:
 
-- Sucrase + Nodemon;
-- ESLint + Prettier + EditorConfig;
+- Sucrase + Nodemon:
+    - `yarn init -y, para instalar o package.json`, em seguida o `yarn add express` para baixar o express. ✅
+- ESLint + Prettier + EditorConfig - Feitos as configurações ✅;
 - Sequelize (Utilize PostgreSQL ou MySQL);
 
 ### Funcionalidades
