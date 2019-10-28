@@ -1,5 +1,4 @@
 import Student from '../models/Student';
-import User from '../models/User';
 
 class StudentController {
   async store(req, res) {
@@ -8,7 +7,9 @@ class StudentController {
     });
 
     if (studentExists) {
-      return res.status(400).json({ error: 'Email is already registered' });
+      return res
+        .status(400)
+        .json({ error: 'O aluno já tem e-mail registrado' });
     }
 
     const { id, name, email, age, weight, height } = await Student.create(
@@ -28,15 +29,17 @@ class StudentController {
   async update(req, res) {
     const { email } = req.body;
 
-    const student = await User.findByPk(req.userId);
+    const student = await Student.findByPk(req.userId);
 
     if (email !== student.email) {
-      const studentExists = await Student.findOne({ where: { email } });
+      const studentExists = await Student.findOne({
+        where: { email },
+      });
 
       if (studentExists) {
         return res
           .status(400)
-          .json({ error: 'Student already has email registered' });
+          .json({ error: 'O aluno já tem e-mail registrado' });
       }
     }
 
